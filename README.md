@@ -1,12 +1,11 @@
-# [Email Lesson Manager](https://immense-ridge-78589.herokuapp.com/)
-
-This is a full stack web application that provides daily lessons via email to subscribed users.
+# <a href="https://immense-ridge-78589.herokuapp.com/">Email Lesson Manager</a> <img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/lesson-manager-logo.png/" alt="email-lesson-manager logo" align="right" height="100"> <a name="top"></a>
 
 ---
 
-## Table of Contents
+## Table of Contents <a name="toc"></a>
 
 - [Overview](#overview)
+- [Instructions](#instructions)
 - [Technologies](#technologies)
 - [Future Development](#future)
 - [Developers](#team)
@@ -14,6 +13,8 @@ This is a full stack web application that provides daily lessons via email to su
 ---
 
 ## Overview <a name="overview"></a>
+
+This is a full stack web application that provides daily lessons via email to subscribed users.
 
 ![Lynx-dataflow-diagram](./public/lynx-DFD.svg)
 
@@ -27,22 +28,28 @@ This is a full stack web application that provides daily lessons via email to su
 
 5. Get smarter every day!
 
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
+
 ---
 
 ## Technologies <a name="technologies"></a>
 
-- [Node.js](https://nodejs.org/en/)
-- [NPM: Chalk](https://www.npmjs.com/package/chalk)
-- [NPM: Express](https://www.npmjs.com/package/express)
-- [NPM: Express Handlebars](https://www.npmjs.com/package/express-handlebars)
-- [NPM: MySQL 2](https://www.npmjs.com/package/mysql2)
-- [NPM: Node Cron](https://www.npmjs.com/package/node-cron)
-- [NPM: Node-Sass](https://www.npmjs.com/package/node-sass)
-- [NPM: Nodemailer](https://www.npmjs.com/package/nodemailer)
-- [NPM: Passport](https://www.npmjs.com/package/passport)
-- [NPM: Sequelize](https://www.npmjs.com/package/sequelize)
-- [Heroku](https://heroku.com)
-- [Heroku Add-on: JawsDB MySQL](https://elements.heroku.com/addons/jawsdb)
+| Technology/Dependency Used                                                  | Purpose                        |
+| --------------------------------------------------------------------------- | ------------------------------ |
+| [Node.js](https://nodejs.org/en/)                                           | JavaScript runtime environment |
+| [NPM: Chalk](https://www.npmjs.com/package/chalk)                           | Logging                        |
+| [NPM: Express](https://www.npmjs.com/package/express)                       | Server                         |
+| [NPM: Express Handlebars](https://www.npmjs.com/package/express-handlebars) | Server-side rendering          |
+| [NPM: MySQL 2](https://www.npmjs.com/package/mysql2)                        | Database                       |
+| [NPM: Node Cron](https://www.npmjs.com/package/node-cron)                   | Job Scheduling                 |
+| [NPM: Node-Sass](https://www.npmjs.com/package/node-sass)                   | Styling                        |
+| [NPM: Nodemailer](https://www.npmjs.com/package/nodemailer)                 | Mailing                        |
+| [NPM: Passport](https://www.npmjs.com/package/passport)                     | Authentication                 |
+| [NPM: Sequelize](https://www.npmjs.com/package/sequelize)                   | Database                       |
+| [Heroku](https://heroku.com)                                                | Deployment                     |
+| [Heroku Add-on: JawsDB MySQL](https://elements.heroku.com/addons/jawsdb)    | Database                       |
+
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
 
 ---
 
@@ -54,11 +61,15 @@ This is a full stack web application that provides daily lessons via email to su
 - More dynamic server-side rendering
 - Database schema reorganization
 
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
+
 ---
 
-## Developers (alphabetical) <a name="team"></a>
+## Developers <a name="team"></a>
 
-- [Bladimir Orellana](https://github.com/BladimirOrellana)
 - [Danny Kim](https://github.com/danninemx)
+- [Bladimir Orellana](https://github.com/BladimirOrellana)
 - [John Paschal](https://github.com/patrickjpaschal)
 - [Martin Palacios](https://github.com/martinapalacios)
+
+<p align='right'><a href='#top'><sup>[Back to Top]</sup></a></p>
