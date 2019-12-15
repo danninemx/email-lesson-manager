@@ -1,6 +1,4 @@
-# <a href="https://immense-ridge-78589.herokuapp.com/">Email Lesson Manager</a> <img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/lesson-manager-logo.png/" alt="email-lesson-manager logo" align="right" height="100"> <a name="top"></a>
-
----
+# <a href="https://immense-ridge-78589.herokuapp.com/">Email Lesson Manager</a> <img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/lesson-manager-logo.png/" alt="email-lesson-manager logo" align="right" height="50"> <a name="top"></a>
 
 ## Table of Contents <a name="toc"></a>
 
@@ -16,15 +14,33 @@
 
 This is a full stack web application that provides daily lessons via email to subscribed users.
 
+It utilizes scheduled mailing in tandem with static resources to solve the challenge of pacing in self-education.
+
 ![Lynx-dataflow-diagram](./public/lynx-DFD.svg)
 
-1. User subscribes to the web app and receives an introductory email.
+---
 
-2. Server sends scheduled, daily emails containing lessons. (If none remains, an alternative reading material will be suggested.)
+## Instructions <a name="instructions"></a>
+
+1. Sign up will send an welcome email and set you up for daily JavaScript lessons.
+
+## <p align="center"><img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/e-learning-welcome.png" alt="email lesson manager welcome email"> </p>
+
+2. Server sends scheduled, daily emails containing lessons.
+
+**[ Daily Lesson ]**
+
+## <p align="center"><img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/e-learning-daily.png" alt="email lesson manager daily email"> </p>
+
+If you have completed all available materials, an alternative reading material will be suggested until new courses become available.
+
+**[ Completion Message ]**
+
+## <p align="center"><img src="https://github.com/danninemx/email-lesson-manager/blob/master/public/e-learning-completion.png" alt="email lesson manager completion email"> </p>
 
 3. User can choose to follow the emailed link to the website, which provides further detail about the subject.
 
-4. The web app displays related subjects that the users can explore at will.
+4. User can explore at will related subjects such as HTML, CSS, HTTP status codes and more.
 
 5. Get smarter every day!
 
