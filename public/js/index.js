@@ -12,32 +12,32 @@ var $sendUserIfnfo = $("#send");
 //TOGGLE THE LOGIN AND SIGN UP BUTTON 
 //IF THE #loginActive ID HAS A VALUE OF 1 IT MEANS THAT THE USER ALREADY HAS AN ACCOUNT
 //IF VALUE IS 0 THEN USER WILL BE CREATING AN ACCOUNT
-$("#toggleLogin").click(function(event) {
+$("#toggleLogin").click(function (event) {
   event.preventDefault();
   if ($("#loginActive").val() == "1") {
-      $(".toggle-name").show()
-      $("#loginActive").val("0");
-      $("#login-title").html("Sign Up");
-      $("#send").html("Sign Up");
-      $("#toggleLogin").html("Login");
-      
-      
-      
+    $(".toggle-name").show()
+    $("#loginActive").val("0");
+    $("#login-title").html("Sign Up");
+    $("#send").html("Sign Up");
+    $("#toggleLogin").html("Login");
+
+
+
   } else {
     $(".toggle-name").hide()
-      $("#loginActive").val("1");
-      $("#login-title").html("Login");
-      $("#send").html("Login");
-      $("#toggleLogin").html("Sign up");
-    
-      
+    $("#loginActive").val("1");
+    $("#login-title").html("Login");
+    $("#send").html("Login");
+    $("#toggleLogin").html("Sign up");
+
+
   }
-  
-  
+
+
 })
 
 // THIS FUNCTION WILL CALL THE "/API/SIGNUP"  AND REGISTER OR LOGIN THE USER
-var saveUser = function(event){
+var saveUser = function (event) {
   event.preventDefault();
   let loginActive = $("#loginActive").val();
   let firstName = $("#firstName").val().trim();
@@ -54,23 +54,23 @@ var saveUser = function(event){
 
 
 
-    $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      url: "/api/signup",
-      type: "POST",
-      data: JSON.stringify(saveUserObjet)
-    }).then(function(result){
-      console.log(result)
-      if (result) {
-       window.location.replace("/")
-      }else{
-        window.location.replace("/login")
-      }
-      
-    })
-  
+  $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    url: "/api/signup",
+    type: "POST",
+    data: JSON.stringify(saveUserObjet)
+  }).then(function (result) {
+    // console.log(result)
+    if (result) {
+      window.location.replace("/")
+    } else {
+      window.location.replace("/login")
+    }
+
+  })
+
 
 
 
@@ -78,7 +78,7 @@ var saveUser = function(event){
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveExample: function (example) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -88,13 +88,13 @@ var API = {
       data: JSON.stringify(example)
     });
   },
-  getExamples: function() {
+  getExamples: function () {
     return $.ajax({
       url: "api/examples",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteExample: function (id) {
     return $.ajax({
       url: "api/examples/" + id,
       type: "DELETE"
@@ -103,9 +103,9 @@ var API = {
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
+var refreshExamples = function () {
+  API.getExamples().then(function (data) {
+    var $examples = data.map(function (example) {
       var $a = $("<a>")
         .text(example.text)
         .attr("href", "/example/" + example.id);
@@ -133,7 +133,7 @@ var refreshExamples = function() {
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var example = {
@@ -146,7 +146,7 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveExample(example).then(function() {
+  API.saveExample(example).then(function () {
     refreshExamples();
   });
 
@@ -156,12 +156,12 @@ var handleFormSubmit = function(event) {
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
+var handleDeleteBtnClick = function () {
   var idToDelete = $(this)
     .parent()
     .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
+  API.deleteExample(idToDelete).then(function () {
     refreshExamples();
   });
 };

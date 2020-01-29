@@ -8,7 +8,7 @@ module.exports = function (app) {
   // THIS app.use FUNCTION IS USE TO DINAMIC CHECK IF SESSION EXIST GLOBALY
   app.use(function (req, res, next) {
     res.locals.isAuthenticated = req.isAuthenticated()
-    console.log(res.locals.isAuthenticated)
+    // console.log(res.locals.isAuthenticated)
     next()
   });
   // Load index page
@@ -34,7 +34,7 @@ module.exports = function (app) {
     db.users.findAll({
       where: { id: session.user_id }
     }).then(function (result) {
-      console.log(result[0])
+      // console.log(result[0])
       res.render("profile", {
         msg: result[0].userFirstName,
         user: result[0],
@@ -61,7 +61,7 @@ module.exports = function (app) {
   // JS METHODS ROUTE
   app.get('/js/methods', (req, res) => {
     db.jsMethodsData.findAll({}).then(function (result) {
-      console.log(result)
+      // console.log(result)
       res.render('jsmethods', { data: result })
     })
   })

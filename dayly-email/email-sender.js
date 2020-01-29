@@ -72,7 +72,7 @@ function massSend() {
   // Determine the highest id possible
   // SELECT MAX(id) FROM jsMethodsData;
   db.jsMethodsData.max('id').then(function (maxId) {
-    console.log(chalk.bgBlue('Highest id in jsMethodsData is :' + maxId));
+    // console.log(chalk.bgBlue('Highest id in jsMethodsData is :' + maxId));
 
     // Query the users table for all users
     db.users.findAll({}).then(function (result) {

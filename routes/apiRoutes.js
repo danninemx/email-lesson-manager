@@ -147,7 +147,7 @@ module.exports = function (app) {
 
               var user_id = result.id;
               console.log("Success Sign up")
-              console.log(user_id)
+              // console.log(user_id)
               req.login(user_id, function (err) {
                 res.redirect('/');
               })
@@ -189,7 +189,7 @@ module.exports = function (app) {
               } else {
 
                 var user_id = result[0].id;
-                console.log(user_id)
+                // console.log(user_id)
                 console.log("Success Login")
                 req.login(user_id, function (err) {
                   res.redirect('/');
